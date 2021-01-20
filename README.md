@@ -1,11 +1,28 @@
-# FrontendCoding
+# Code challenge Marcos 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+ Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+
+## Funciones y características
+
+- Listar todos los usuarios
+- Filtrar la tabla de los usuarios por nombres
+- Ver un pequeño detalle y el detalle completo (en este caso son los mismos, era para añadir una vista)
+- Interceptor para la gestion de erroes en las llamadas http ( solo mostramos por consola en caso de error)
+- Loader mientras traen los datos de la petición http
+
+## Herramientas usadas
+
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Angular](https://angular.io/docs)
+- [Bootstrap](https://getbootstrap.com/)
+- [Firebase](https://firebase.google.com/docs/)
+- [ng-http-loader](https://www.npmjs.com/package/ng-http-loader)
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+<!--
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -24,4 +41,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
