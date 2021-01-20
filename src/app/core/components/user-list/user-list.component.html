@@ -1,0 +1,42 @@
+<div class="row">
+   <div class="col-12 col-md-8">
+      <!-- Loader para cuando hagamos la peticion, esta puesto para que solo funcione con la llamada de todos los usuarios -->
+      <ng-http-loader [filteredUrlPatterns]="['\\d', '[a-zA-Z]']"></ng-http-loader>
+      <div class="user-list">
+         <div class="row">
+            <div class="col">
+               <h2 class="user-list-title">User List</h2>
+               <p class="user-list-explanation">*Click in a row to see the user detail</p>
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search by name" name="filterUsers"
+                     [(ngModel)]="filterUsers">
+               </div>
+            </div>
+
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <table class="table table-hover align-middle">
+                  <thead>
+                     <tr>
+                        <th scope="col" (click)="sortNumberColumn()">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="cursor-pointer" *ngFor="let user of userList | filter:filterUsers" (click)="passDetailUser(user)">
+                        <th scope="row">{{user.id}}</th>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 col-md-4">
+      <app-user-detail [userSelected]="userSelected"> </app-user-detail>
+   </div>
+</div>

@@ -1,0 +1,22 @@
+<div  class="user-detail" *ngIf="userDetail else noUserSelected">
+    <div class="user-detail-avatar-wrapper">
+        <!-- La imagen es sacada de una api que genera un avatar en funcion del numbre que le pases -->
+        <img class="user-detail-avatar-img"
+            src="https://eu.ui-avatars.com/api/?name={{userDetail.name}}&background=random" alt="Avatar img">
+    </div>
+    <div class="user-detail-content">
+        <p class="user-detail-name">{{userDetail.name}}</p>
+        <p class="user-detail-email">{{userDetail.email}}</p>
+        <p class="user-detail-id"><span>#</span> {{userDetail.id}}</p>
+    </div>
+    <div class="user-detail-footer">
+        <button type="button" class="btn btn-outline-primary" [routerLink]="['userdetail',userDetail.id]">View Full profile</button>
+    </div>
+</div>
+
+<ng-template #noUserSelected>
+    <div class="no-user-wrapper">
+        <h3 class="text-info"> No user data to display</h3>
+        <p class="text-secondary">Please select an user to load data</p>
+    </div>
+</ng-template>

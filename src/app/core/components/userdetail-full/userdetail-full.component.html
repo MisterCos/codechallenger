@@ -1,0 +1,27 @@
+<div class="user-view" *ngIf="userDetail">
+    <div class="row">
+        <div class="col-12">
+            <div class="user-view-title-wrapper">
+                <i class="fa fa-arrow-left" [routerLink]="['']"></i>
+                <h3>Full profile section</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row  align-items-center">
+        <div class="col-md-4 col-12">
+            <div class="user-view-profile-img">
+                <img src="../../../assets/img/img_avatar.png" alt="" />
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <p class="user-view-data">Name: <span>{{userDetail.name}}</span> </p>
+            <p class="user-view-data">Email: <a href="">{{userDetail.email}}</a> </p>
+            <p class="user-view-data">ID: <span>{{userDetail.id}}</span> </p>
+            <div class="d-flex justify-content-around">
+                <button type="button" class="btn btn-primary" disabled><i class="fa fa-pencil"></i> Edit</button>
+                <button type="button" class="btn btn-danger" disabled><i class="fa fa-trash"></i> Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>
